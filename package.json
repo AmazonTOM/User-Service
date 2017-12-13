@@ -1,0 +1,35 @@
+{
+  "name": "incentive-service",
+  "version": "1.0.0",
+  "description": "The project description",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asidhus/incentive-service.git"
+  },
+  "author": "Amandeep Sidhu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asidhus/incentive-service/issues"
+  },
+  "homepage": "https://github.com/asidhus/incentive-service#readme",
+  "dependencies": {
+    "aws-sdk": "^2.167.0",
+    "body-parser": "^1.18.2",
+    "cassandra-driver": "^3.3.0",
+    "elasticsearch": "^14.0.0",
+    "eslint": "^4.13.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "express": "^4.16.2",
+    "faker": "^4.1.0",
+    "mongoose": "^4.13.6",
+    "nodemon": "^1.12.5",
+    "pg": "^7.4.0",
+    "request": "^2.83.0",
+    "underscore": "^1.8.3"
+  }
+}
