@@ -10,17 +10,13 @@ client.connect((err) => {
     console.log('Cassandra connected!!');
   }
 });
+
 const clearDB = () => {
   helper.clearDB(client);
 };
 const generate = () => {
-    helper.insertMany(client, 0);
+  helper.insertMany(client, 0);
 };
 
-module.exports = {generate, clearDB};
+module.exports = { generate, clearDB };
 
-
-
-
-
-//50 30    -125 -70
