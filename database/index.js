@@ -18,5 +18,8 @@ const generate = () => {
   helper.insertMany(client, 0);
 };
 
-module.exports = { generate, clearDB };
+const search = (arr) => {
+  return helper.search(client, arr);
+};
+module.exports = { generate, clearDB, search };
 

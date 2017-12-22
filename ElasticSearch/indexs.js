@@ -5,7 +5,7 @@ const elasticClient = new elasticsearch.Client({
   log: 'info',
 });
 
-const indexName = 'products';
+const indexName = 'test';
 
 /**
 * Delete an existing index
@@ -53,20 +53,18 @@ const initMapping = () => {
         price: { type: 'float' },
         primeeligible: { type: 'boolean' },
         quantity: { type: 'integer' },
-        warehouses: {
-          type: 'nested',
-          properties: {
-            name: { type: 'text' },
-            latitude: { type: 'float' },
-            longitude: { type: 'float' },
-          },
-        },
+        warehouseNum: { type: 'integer' },
+        SF: { type: 'boolean' },
+        Miami: { type: 'boolean' },
+        Chicago: { type: 'boolean' },
+        NewYork: { type: 'boolean' },
+        Austin: { type: 'boolean' },
       },
     },
   });
 };
 
-function addDocument(document) {
+function addDocument(document, arr, num) {
   return elasticClient.index({
     index: indexName,
     type: 'document',
@@ -80,7 +78,12 @@ function addDocument(document) {
       price: document[3],
       primeeligible: document[4],
       quantity: document[8],
-      warehouses: document[5],
+      SF: arr[0],
+      Miami: arr[1],
+      Chicago: arr[2],
+      NewYork: arr[3],
+      Austin: arr[4],
+      warehouseNum: num,
     },
   });
 }
